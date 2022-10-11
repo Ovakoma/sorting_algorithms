@@ -4,7 +4,7 @@
  * swapNode - swaps node to arrange in a sorted way.
  * @left: pointer to current node.
  * @right: new node to swap with previous node.
- */ 
+ */
 void swapNode(listint_t **h, listint_t **left, listint_t *right)
 {
 	(*left)->next = right->next;
@@ -32,7 +32,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	
+
 	for (cur_t = (*list)->next; cur_t != NULL; cur_t = tmp)
 	{
 		tmp = cur_t->next;

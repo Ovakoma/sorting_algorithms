@@ -36,7 +36,7 @@ void merge(size_t start, size_t mid, size_t end, int *src, int *dest)
 	}
 	for (i = start, k = 0; i < end; i++)
 		src[i] = dest[k++];
-	
+
 	printf("[Done]: ");
 	print_array(src + start, end - start);
 }

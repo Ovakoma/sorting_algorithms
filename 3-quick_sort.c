@@ -26,10 +26,10 @@ int lomuto_partition(int *arr, int lo, int hi, size_t size)
 
 	if (lo >= hi || lo < 0)
 		return (-1);
-	
+
 	pivot = arr[hi];
 	i = lo;
-	
+
 	for (j = lo; j < hi; j++)
 	{
 		if (arr[j] <= pivot)
@@ -41,7 +41,7 @@ int lomuto_partition(int *arr, int lo, int hi, size_t size)
 	}
 	if (hi != lo && arr[hi] != arr[i])
 		swap_el(arr, &arr[i], &arr[hi], size);
-	return i;
+	return (i);
 }
 
 /**
@@ -58,7 +58,7 @@ void swap_el(int *arr, int *el_1, int *el_2, size_t size)
 	tmp = *el_1;
 	*el_1 = *el_2;
 	*el_2 = tmp;
-	
+
 	print_array(arr, size);
 }
 
