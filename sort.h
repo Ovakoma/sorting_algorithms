@@ -4,6 +4,8 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 /**
@@ -32,5 +34,16 @@ void quick_sort_recur(int *arr, int low, int high, size_t size);
 void shell_sort(int *array, size_t size);
 void isHsorted(int *arr, size_t n, size_t size);
 void swapVal(int *arr, int i, int j);
+void cocktail_sort_list(listint_t **list);
+void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void splitMerge(size_t start, size_t end, int *array, int *arr);
+void merge(size_t start, size_t mid, size_t end, int *src, int *dest);
+void heap_sort(int *array, size_t size);
+void swap(int *arr, int e1, int e2, const int r);
+void bitonic_sort(int *array, size_t size);
+void _sort(int *array, int low, int size, int dir, const int r_size);
+void bitonic_merge(int *array, int low, int size, int dir, const int r_size);
+void printcheck(int *array, int r1, int r2);
 
 #endif
