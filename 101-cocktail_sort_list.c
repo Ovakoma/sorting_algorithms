@@ -5,7 +5,7 @@
  * @list: pointer to the head node
  * @node: node to be swapped
  */
-void swap(listint_t **list, listint_t *node)
+void lswap(listint_t **list, listint_t *node)
 {
 	node->next->prev = node->prev;
 	if (node->prev != NULL)
@@ -42,7 +42,7 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (sptr->n > sptr->next->n)
 			{
-				swap(list, sptr);
+				lswap(list, sptr);
 				swapped = true;
 				print_list(*list);
 			}
@@ -57,7 +57,7 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (sptr->prev->n > sptr->n)
 			{
-				swap(list, sptr->prev);
+				lswap(list, sptr->prev);
 				swapped = true;
 				print_list(*list);
 			}
